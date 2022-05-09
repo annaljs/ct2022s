@@ -39,6 +39,12 @@
 			height: 100px;
 			width: 100px;
 		}
+		.point{
+			fill:red;
+			stroke: white;
+			style: "cursor:pointer"
+		}
+		
 	</style>
 
 	
@@ -198,6 +204,7 @@
                 var svgPathObj = mkPath(glyph.path.commands, font.unitsPerEm);
 
                 var tmpPath = svgPathObj[0];
+				var tmpPoint = svgPathObj[1];
 
                 var svg3 = d3.select('#svg_image')
                                 .append('svg')
@@ -211,6 +218,20 @@
                     .attr('d', tmpPath.toPathData())
                     .attr('class', 'font-svg')
                 ;
+
+				tmpPoint.forEach (function(d){
+					var Point = svg3.append("circle")
+        			.attr("class", "point")
+        			.attr("r", 29.2);
+
+				var point_coordinates = svg3.selectAll(".point")
+        			.data(svgPathObj[1]);
+
+				point_coordinates.merge(Point)
+					.attr("cx", function(d) { return d[0] })
+					.attr("cy", function(d) { return  d[1] });
+				});
+				
 
                 d3.select('#svg_text')
                     .html(svg3.node().outerHTML)
