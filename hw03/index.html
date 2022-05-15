@@ -1,0 +1,98 @@
+<html>
+  <head>
+	<body>
+        <div class="main">
+            <div class="item" id="code-area">
+                <div class="title">HW03程式碼超連結</div>
+                <div class="hyperlink">
+                    <a href="https://t109598105.github.io/CT2021s-hw3-example/">連結</a>
+                </div>
+            </div>
+            <div class="item" id="paper-area">
+                <div class="title">PNG 骨架練習圖</div>
+                <div class="single-pic">
+                    <img src="write.png"></img>
+                </div>
+            </div>
+            <div class="item-group">
+                 <div class="item" id="heiti-area">
+                    <div class="title">底圖骨架</div>
+                    <div class="pic-group">
+                        <img src="./林.svg"> 
+                        <img src="./佳.svg"> 
+                        <img src="./萱.svg">
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="title">黑體 SVG</div>
+                    <div class="pic-group" id="S-canvas">
+                        <img src="./林(黑).svg"> 
+                        <img src="./佳(黑).svg"> 
+                        <img src="./萱(黑).svg">
+                    </div>
+                </div>
+            </div>
+                <div class="item-group">
+                    <div class="item" id="songti-area">
+                        <div class="title">底圖骨架</div>
+                        <div class="pic-group">
+                            <img src="./林.svg"> 
+                            <img src="./佳.svg"> 
+                            <img src="./萱.svg">
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="title">宋體 SVG</div>
+                        <div class="pic-group" id="Y-canvas">
+                            <img src="./林(明).svg"> 
+                            <img src="./佳(明).svg"> 
+                            <img src="./萱(明).svg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <style>
+                *{
+                    padding:0;
+                    margin:0;
+                }
+                .main{
+                    min-height:100vh;
+                    padding:1rem 5rem
+                    }
+                .main .item{
+                    padding:2rem;
+                    margin:2rem 0;
+                    border-style:solid;
+                    border-width:1px;
+                    overflow:auto
+                }
+                .main .item-group{
+                    display:flex;
+                    justify-content:space-between;
+                    align-items:center;
+                    margin:2rem 0;width:100%
+                }
+                .main .item-group .item{
+                    height:540px;
+                    width:50%;
+                    margin:0
+                }
+                .main .item-group .item:first-child{
+                    margin-right:1rem
+                }
+                .main .item.navbar{display:flex;justify-content:center;align-items:center}
+                .main .item.navbar img{width:10%;border-style:solid;margin:0 2rem;border-radius:50%;overflow:hidden;cursor:pointer}
+                .main .item.navbar img:hover{animation-name:my-rotate;animation-duration:1s;animation-timing-function:linear}
+                .main .item .title{font-size:1.5rem;display:inline-block;}
+                .main .item .sm-subtitle{font-size:1rem;margin-top:-10px;font-style:italic;border-width:1px;margin-bottom:10px}
+                .main .item .hyperlink a{text-decoration:none}
+                .main .item .single-pic img{max-height:500px;max-width:100%}
+                .main .item .pic-group img{max-height:200px;max-width:33%}
+                .main .item .pic-group canvas{max-height:400px;max-width:100%;cursor:pointer}
+                
+            </style>
+  </body>
+  
+  
+  </html>
